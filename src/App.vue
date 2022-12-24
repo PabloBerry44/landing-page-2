@@ -85,11 +85,13 @@
         </div>
         <img src="./assets/images/trafalgar-illustration sec03 1.png" alt="" />
     </section>
+    <Footer />
 </template>
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
 import NavigationDesktop from './components/NavigationDesktop.vue'
 import NavigationMobile from './components/NavigationMobile.vue'
+import Footer from './components/Footer.vue'
 
 const screenWidth = ref(0)
 
@@ -113,7 +115,7 @@ header p {
     justify-content: center;
     align-items: center;
     gap: 110px;
-    padding: 5vw;
+    padding: 0 5vw;
     margin-top: 122px;
 
     &.reverse {
@@ -135,7 +137,7 @@ header p {
 
     img {
         width: 100%;
-        max-width: 693px;
+        max-width: 600px;
         min-width: 300px;
     }
 }
