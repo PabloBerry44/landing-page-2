@@ -13,13 +13,13 @@
         </div>
         <transition name="height">
             <div class="dropdown" v-if="menuIsVisible">
-                <ul>
+                <menu>
                     <li>Home</li>
                     <li>Find a doctor</li>
                     <li>Apps</li>
                     <li>Testimonials</li>
                     <li>About us</li>
-                </ul>
+                </menu>
             </div>
         </transition>
     </nav>
@@ -53,6 +53,8 @@ nav {
         }
 
         button {
+            padding: unset;
+
             .wrapper {
                 display: flex;
                 flex-direction: column;
@@ -92,7 +94,7 @@ nav {
         top: 101px;
         width: 100%;
 
-        ul {
+        menu {
             display: flex;
             flex-flow: column;
             list-style: none;

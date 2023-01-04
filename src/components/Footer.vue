@@ -1,7 +1,12 @@
 <template>
     <footer>
         <div class="column">
-            <img src="../assets/logo.svg" alt="Trafalgar" />
+            <div class="logo-wrapper">
+                <div class="logo">
+                    <span>T</span>
+                </div>
+                <span class="text">Trafalgar</span>
+            </div>
             <p class="text">
                 Trafalgar provides progressive, and affordable healthcare, accessible on mobile and online for everyone
             </p>
@@ -77,8 +82,34 @@ footer {
             font-weight: 700;
         }
 
-        img {
-            height: 41px;
+        .logo-wrapper {
+            display: flex;
+            flex-direction: row;
+            gap: 12px;
+            align-items: center;
+
+            .logo {
+                width: 41px;
+                height: 41px;
+                background: white;
+                align-items: center;
+                justify-content: center;
+                display: flex;
+                border-radius: 50%;
+
+                span {
+                    color: #5b9bf3;
+                    font-size: 26px;
+                    font-weight: 700;
+                    height: 1.1em;
+                }
+            }
+
+            .text {
+                font-weight: 700;
+                font-size: 26px;
+                height: 1.1em;
+            }
         }
 
         ul {

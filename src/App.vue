@@ -2,7 +2,7 @@
     <NavigationDesktop v-if="screenWidth > 950" />
     <NavigationMobile v-else />
 
-    <header class="two-columns-template">
+    <section class="two-columns-template hero">
         <div class="text-content">
             <h1>Virtual healthcare for you</h1>
             <p>
@@ -10,8 +10,8 @@
             </p>
             <button class="blue">Consult today</button>
         </div>
-        <img src="./assets/images/trafalgar-header illustration 1.png" alt="" />
-    </header>
+        <img src="./assets/images/trafalgar-header-illustration-1.webp" alt="" />
+    </section>
 
     <section class="services">
         <h2>Our services</h2>
@@ -64,7 +64,7 @@
             </p>
             <button class="white">Learn more</button>
         </div>
-        <img src="./assets/images/trafalgar-illustration sec02 1.png" alt="" />
+        <img src="./assets/images/trafalgar-illustration-sec02-1.webp" alt="" />
     </section>
     <section class="two-columns-template">
         <div class="text-content">
@@ -83,8 +83,29 @@
                 </svg>
             </button>
         </div>
-        <img src="./assets/images/trafalgar-illustration sec03 1.png" alt="" />
+        <img src="./assets/images/trafalgar-illustration-sec03-1.webp" alt="" />
     </section>
+
+    <article class="testimonials">
+        <h2>What our customers are saying</h2>
+        <hr />
+        <div class="testimonial-wrapper">
+            <div class="person-info">
+                <img src="./assets/images/dude.webp" alt="Edward Newgate profile picture" />
+                <div class="info-wrapper">
+                    <span class="name">Edward Newgate</span>
+                    <span class="title">Founder Circle</span>
+                </div>
+            </div>
+            <div class="quote">
+                <p>
+                    “Our dedicated patient engagement app and web portal allow you to access information instantaneously
+                    (no tedeous form, long calls, or administrative hassle) and securely”
+                </p>
+            </div>
+        </div>
+    </article>
+
     <Footer />
 </template>
 <script setup lang="ts">
@@ -106,7 +127,7 @@ function checkWidth() {
 }
 </script>
 <style scoped lang="scss">
-header p {
+.hero p {
     font-size: 21px;
 }
 .two-columns-template {
@@ -192,6 +213,103 @@ header p {
     }
     button {
         margin-top: 72px;
+    }
+}
+
+.testimonials {
+    margin-top: 150px;
+    background: linear-gradient(208.18deg, #67c3f3 9.05%, #5a98f2 76.74%);
+    border-radius: 24px;
+    color: white;
+    width: 95%;
+    max-width: 1120px;
+    margin-inline: auto;
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+    min-height: 425px;
+
+    @media (min-width: 500px) {
+        padding: 64px;
+        margin-top: 266px;
+
+        .testimonial-wrapper {
+            gap: 110px;
+        }
+    }
+
+    hr {
+        width: 56px;
+        height: 2px;
+        background: white;
+        margin-inline: auto;
+        margin-top: 25px;
+    }
+
+    .testimonial-wrapper {
+        margin-top: 60px;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 50px;
+        justify-content: space-evenly;
+
+        .person-info {
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            gap: 20px;
+
+            img {
+                border-radius: 50%;
+                border: 4px solid white;
+                width: 80px;
+            }
+
+            .info-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.6em;
+
+                .name {
+                    width: max-content;
+                    font-weight: 700;
+                    font-size: 18px;
+                }
+                .title {
+                    width: max-content;
+                    font-weight: 400;
+                    font-size: 16px;
+                }
+            }
+            @media (min-width: 500px) {
+                img {
+                    width: 133px;
+                }
+
+                .info-wrapper {
+                    .name {
+                        font-weight: 700;
+                        font-size: 22px;
+                    }
+                    .title {
+                        font-weight: 400;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+        .quote {
+            max-width: 420px;
+            width: 100%;
+
+            p {
+                color: white;
+                font-weight: 400;
+                font-size: 19px;
+                text-align: left;
+            }
+        }
     }
 }
 </style>

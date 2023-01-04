@@ -1,13 +1,13 @@
 <template>
     <nav>
         <img src="../assets/logo.svg" alt="Trafalgar" />
-        <ul>
+        <menu>
             <li>Home</li>
             <li>Find a doctor</li>
             <li>Apps</li>
             <li>Testimonials</li>
             <li>About us</li>
-        </ul>
+        </menu>
     </nav>
 </template>
 <script setup lang="ts"></script>
@@ -19,7 +19,7 @@ nav {
     justify-content: space-between;
     padding: 56px 10vw;
 
-    ul {
+    menu {
         display: flex;
         flex-flow: row nowrap;
         list-style: none;
